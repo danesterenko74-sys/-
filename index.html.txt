@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Космическая сказка</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #000;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    header.hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/station_view.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header h1 {
+      font-size: 4em;
+      text-shadow: 0 0 20px #00ffff;
+    }
+
+    header p {
+      font-size: 1.5em;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    #playMusic {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      font-size: 16px;
+      background: #00ffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      border-bottom: 1px solid #222;
+      border-radius: 10px;
+    }
+
+    section h2 {
+      color: #00ffff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    .dialog {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      background: rgba(0,0,0,0.6);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffff33;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 0.6s ease-out;
+    }
+
+    .dialog img {
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    .dialog p {
+      max-width: 70%;
+      margin: 0;
+    }
+
+    .dialog p strong {
+      color: #00ffff;
+    }
+
+    .scene-image {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .intro {
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>Космическая сказка</h1>
+  <p>История Алексея и Галины на далёкой станции</p>
+
+  <audio id="bgMusic" loop>
+    <source src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/Tuman_Tretey_Planety.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+  </audio>
+
+  <button id="playMusic"> Включить музыку</button>
+</header>
+
+<!-- Вводная часть -->
+<section class="intro">
+  <h2>Вводная часть</h2>
+  <p>
+    Вы находитесь на далёкой космической станции, скрытой под огромным куполом, где жизнь и наука соединены в единую систему. 
+    Главный герой Алексей прибывает на станцию, чтобы познакомиться с её особенностями и исследовать сигналы из далёкого космоса. 
+    Вместе с Галиной он будет раскрывать тайны станции и окружающей планеты.
+  </p>
+  <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/station_view.png" alt="Вид станции" class="scene-image">
+</section>
+
+<!-- Сцена 1 -->
+<section class="scene">
+  <h2>Сцена 1: Прибытие на базу</h2>
+  <div class="dialog">
+    <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/aleksei.png" alt="Алексей">
+    <p><strong>Алексей:</strong> Ух… Никита… это огромно! Я ожидал научный комплекс, а тут целый город под куполом!</p>
+    <p><strong>Никита:</strong> Купол защищает город от внешней атмосферы и экстремальных условий. Контроль за всеми уровнями станции оптимизирован.</p>
+  </div>
+</section>
+
+<!-- Сцена 2 -->
+<section class="scene">
+  <h2>Сцена 2: Главный проспект</h2>
+  <div class="dialog">
+    <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/aleksei.png" alt="Алексей">
+    <p><strong>Алексей:</strong> Люди живут здесь, как в обычном городе. А работа науки прямо под ногами.</p>
+<p><strong>Никита:</strong> Центральное здание — сердце станции. В нём сосредоточены лаборатории и рабочие модули.</p>
+  </div>
+  <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/main_street.png" alt="Главный проспект" class="scene-image">
+</section>
+
+<!-- Сцена 3 -->
+<section class="scene">
+  <h2>Сцена 3: Кофетерий</h2>
+  <div class="dialog">
+    <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/aleksei.png" alt="Алексей">
+    <p><strong>Алексей:</strong> Честно… кофетерий выглядит как городской парк с террасой.</p>
+    <p><strong>Никита:</strong> Люди нуждаются в комфортной среде для восстановления энергии.</p>
+  </div>
+  <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/cafeteria.png" alt="Кофетерий" class="scene-image">
+</section>
+
+<!-- Сцена 4 -->
+<section class="scene">
+  <h2>Сцена 4: Комната отдыха с аквариумом</h2>
+  <div class="dialog">
+    <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/aleksei.png" alt="Алексей">
+    <p><strong>Алексей:</strong> Ух… смотри на этого кита! Он огромный!</p>
+    <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/galina.png" alt="Галина">
+    <p><strong>Галина:</strong> Поддерживать таких животных в стабильном состоянии непросто. Но это помогает моделировать экосистему экзопланеты.</p>
+  </div>
+  <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/aquarium.png" alt="Комната с аквариумом" class="scene-image">
+</section>
+
+<!-- Сцена 5 -->
+<section class="scene">
+  <h2>Сцена 5: Лаборатория Крылова</h2>
+  <div class="dialog">
+    <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/aleksei.png" alt="Алексей">
+    <p><strong>Алексей:</strong> Никита… смотри на эти компьютеры и оборудование!</p>
+    <p><strong>Никита:</strong> Центральный блок контролирует все эксперименты.</p>
+  </div>
+  <img src="https://raw.githubusercontent.com/danesterenko74-sys/IKAR/main/lab.png" alt="Лаборатория" class="scene-image">
+</section>
+
+<script>
+  // Плавное появление диалогов
+  const dialogs = document.querySelectorAll('.dialog');
+  window.addEventListener('scroll', () => {
+    dialogs.forEach(d => {
+      const rect = d.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 100) {
+        d.style.opacity = 1;
+        d.style.transform = 'translateY(0)';
+      }
+    });
+  });
+
+  // Включение музыки
+  const audio = document.getElementById('bgMusic');
+  const btn = document.getElementById('playMusic');
+  btn.addEventListener('click', () => {
+    audio.play();
+    btn.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
